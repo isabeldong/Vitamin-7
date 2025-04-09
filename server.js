@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'Pleasanton0305!',
-    database: 'company_db'
+    database: 'company_db_2'
 })
 
 // MySQL Connection Verification
@@ -62,7 +62,7 @@ app.get('/projects', async (req, res) => {
 
 // Endpoint to get all employees from MySQL when you enter: http://localhost:3000/employees
 app.get('/employees', function (req, res) {
-    connection.query('SELECT * FROM employees', function (error, results, fields) {
+    connection.query('SELECT * FROM employees_2', function (error, results, fields) {
         if (error) throw error;
         res.json(results);
     });
